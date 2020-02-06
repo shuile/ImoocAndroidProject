@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">StorageDemo</string>
-    <string name="sharepreference_show">SharePreference演示</string>
-    <string name="external_storage_text">外部存储</string>
-    <string name="internal_storage_text">内部存储演示</string>
-</resources>
