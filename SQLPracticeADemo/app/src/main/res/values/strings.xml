@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SQLPracticeADemo</string>
+    <string name="learner_content">11111</string>
+    <string name="name_content">程序第一次启动除了获取展示数据外，还需要创建数据表book，建立列id、learner、name（与json数据key对应），并将数据插入到book表中</string>
+</resources>

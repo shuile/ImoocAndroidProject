@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00ffff">
+
+    <!--
+    被设置weight值的控件，宽度应该为该控件的原宽度+父控件的剩余空间比例
+    水平方向的线性布局中：使用weight时，需注意将宽度设置为0dp
+    垂直方向的线性布局中：使用weight时，需注意将高度设置为0dp
+    -->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="first"
+        android:background="#ff00ff"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="second111111111111"
+        android:background="#0000ff"
+        />
+
+</LinearLayout>
