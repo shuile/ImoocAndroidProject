@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ImoocHomework_Android01</string>
+
+    <string name="cover">此处为图书封面</string>
+    <string name="book_name">书名</string>
+    <string name="des">概述</string>
+    <string name="writer">作者</string>
+    <string name="date">日期</string>
+
+</resources>

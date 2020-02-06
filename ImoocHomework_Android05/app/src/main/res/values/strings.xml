@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ImoocHomework_Android05</string>
+
+    <string-array name="main_menu">
+        <item>飞机票</item>
+        <item>住酒店</item>
+        <item>去旅游</item>
+        <item>周边游</item>
+        <item>买门票</item>
+        <item>火车票</item>
+        <item>汽车票</item>
+        <item>领里程</item>
+    </string-array>
+
+    <string-array name="second_menu">
+        <item>国际机票</item>
+        <item>签证服务</item>
+        <item>飞机接送</item>
+    </string-array>
+
+    <string-array name="find_main_menu">
+        <item>旅行热讯</item>
+        <item>广场动态</item>
+        <item>热点地带</item>
+        <item>边走边买</item>
+    </string-array>
+
+    <string-array name="find_second_menu1">
+        <item>结伴而行</item>
+        <item>游历智囊</item>
+        <item>旅行直播</item>
+    </string-array>
+
+    <string-array name="find_second_menu2">
+        <item>一起才好玩</item>
+        <item>教你游世界</item>
+        <item>分享结队游</item>
+    </string-array>
+
+    <string-array name="news_content">
+        <item>从广州去东莞仅需要半个小时，美食美景统统都在等着你!</item>
+        <item>旅行前最最应该做的10件准备事项，千万别给忽略了</item>
+        <item>北京周边竟然藏着20个绝美仙境，等你免费玩一年!</item>
+    </string-array>
+
+    <string-array name="news_from">
+        <item>羊城攻略</item>
+        <item>冬夏旅游</item>
+        <item>北京攻略</item>
+    </string-array>
+</resources>
