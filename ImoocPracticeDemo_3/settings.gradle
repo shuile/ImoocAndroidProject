@@ -1,0 +1,2 @@
+include ':app', ':animation', ':transitionanimation', ':customview'
+rootProject.name='ImoocPracticeDemo_3'

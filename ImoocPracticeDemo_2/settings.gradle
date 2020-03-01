@@ -1,0 +1,2 @@
+include ':app', ':mygif', ':localgif'
+rootProject.name='ImoocPracticeDemo_2'

@@ -1,0 +1,2 @@
+include ':app', ':testglide', ':testlogger', ':testrecyclerview', ':testndk'
+rootProject.name='ImoocPracticeDemo_1'

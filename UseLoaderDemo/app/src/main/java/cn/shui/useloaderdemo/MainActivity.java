@@ -15,8 +15,14 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 
 /**
@@ -32,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private ListView mContactsLv;
     private LoaderManager loaderManager;
     private SimpleCursorAdapter mCursorAdapter;
+    private EditText mNameEt;
+    private String filterName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,25 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 new String[]{ContactsContract.Contacts.DISPLAY_NAME},
                 new int[]{android.R.id.text1}, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
         mContactsLv.setAdapter(mCursorAdapter);
+
+        mNameEt = findViewById(R.id.et_contacts_name);
+        // 联系人筛选文本框内容改变后，重新加载Loader的数据
+        mNameEt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filterName = s.toString();
+                // 重新创建Loader
+                loaderManager.restartLoader(0, null, MainActivity.this);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
         loaderManager = getSupportLoaderManager();
 
@@ -66,8 +93,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
-        return new CursorLoader(this, ContactsContract.Contacts.CONTENT_URI,
-                null, null, null, null);
+        Uri uri = ContactsContract.Contacts.CONTENT_URI;
+        if (!TextUtils.isEmpty(filterName)) {
+            uri = Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_FILTER_URI, Uri.encode(filterName));
+        }
+        CursorLoader cursorLoader = new CursorLoader(this, uri, null,
+                null, null, null);
+        return cursorLoader;
     }
 
     /**

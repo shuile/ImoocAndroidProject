@@ -7,6 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/et_contacts_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input your name"
+        />
+
     <ListView
         android:id="@+id/lv_contacts_list"
         android:layout_width="match_parent"
