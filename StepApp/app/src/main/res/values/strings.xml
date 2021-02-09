@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StepApp</string>
+    <string name="imooc_step">计步器</string>
+    <string name="tips">每天走一步，\n走出健康路</string>
+</resources>
